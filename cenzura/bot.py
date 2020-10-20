@@ -18,8 +18,8 @@ def get_prefix(client, message):
     prefix = prefixes[str(message.guild.id)]
     return commands.when_mentioned_or(prefix)(client, message)
 
-client = commands.AutoShardedBot(command_prefix = get_prefix)
-client.remove_command('help')
+client = commands.AutoShardedBot(command_prefix=get_prefix, intents=discord.Intents.all())
+client.remove_command("help")
 os.environ["JISHAKU_NO_UNDERSCORE"] = "true"
 
 extensions = ["fun", "admin", "muzyka", "lvls", "inne", "sranks", "info", "pomoc", "dblistatest", "developerskie", "eventy", "status", "handler", "jishaku"]
@@ -27,6 +27,6 @@ extensions = ["fun", "admin", "muzyka", "lvls", "inne", "sranks", "info", "pomoc
 
 @client.event
 async def on_ready():
-    print("ONLINE")
+    print("online")
     
 client.run(config.token)
