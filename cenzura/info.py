@@ -12,9 +12,18 @@ class Info(commands.Cog):
         
     @commands.command(description="Pokazuje ekipe bota", usage="team")
     async def team(self, ctx):
-        czubix = self.bot.get_user(636096693712060416)
-        _6bytes = self.bot.get_user(264905890824585216)
-        e = discord.Embed(title="Ekipa:", description=f"{czubix} - Developer\n{_6bytes} - pomocnik", color= discord.Color.red())
+        poligon = {
+            "owners": [
+                0,
+                0
+            ],
+            "poligon": [
+                0,
+                0
+            ]
+        }
+
+        e = discord.Embed(title="Ekipa:", description="\n".join(list(map(lambda user: self.bot.get_user(user).name + "#" + self.bot.get_user(user).discriminator, poligon["owners"]))) + "\n\n**Reszta poligonu**:\n" + "\n".join(list(map(lambda user: self.bot.get_user(user).name + "#" + self.bot.get_user(user).discriminator, poligon["poligon"]))), color= discord.Color.red())
         e.set_thumbnail(url=self.bot.user.avatar_url)
         await ctx.send(embed=e)
         
