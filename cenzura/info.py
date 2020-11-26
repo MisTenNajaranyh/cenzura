@@ -14,7 +14,7 @@ class Info(commands.Cog):
     async def team(self, ctx):
         czubix = self.bot.get_user(636096693712060416)
         _6bytes = self.bot.get_user(264905890824585216)
-        e = discord.Embed(title="Ekipa:", description=f"{czubix} - Developer\n{_6bytes} - jest bo jest i nic nie zrobił", color= discord.Color.red())
+        e = discord.Embed(title="Ekipa:", description=f"{czubix} - Developer\n{_6bytes} - pomocnik", color= discord.Color.red())
         e.set_thumbnail(url=self.bot.user.avatar_url)
         await ctx.send(embed=e)
         
