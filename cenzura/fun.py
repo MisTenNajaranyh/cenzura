@@ -131,7 +131,7 @@ class Fun(commands.Cog):
             return await ctx.send(embed=e)
           
         answer = random.choice("Tak, Nie, Możliwe że tak, Możliwe że nie, Możliwe lecz nie wiem, Raczej tak, Raczej nie, Oczywiście że tak, Oczywiście że nie, Na pewno tak, Na pewno nie".split(", "))
-        await ctx.send(f":8ball: | **{answer}**")
+        await ctx.send(answer)
    
     @commands.command(description="Losuje tekst z podanych", usage="rchoice (a) | (b) | (c) itd.")
     async def rchoice(self, ctx, *, arg):
