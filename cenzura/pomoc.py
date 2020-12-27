@@ -53,7 +53,7 @@ class Pomoc(commands.Cog):
         for cog in commands:
             e.add_field(name=(names[cog] if cog in names else cog) + ":", value="> " + ", ".join(["`" + cmd + "`" for cmd in commands[cog]]), inline=False)
 
-        e.add_field(name="\u200b", value=f"\[ [Dodaj bota](https://discord.com/api/oauth2/authorize?client_id={self.bot.user.id}&permissions=305196118&scope=bot) \] \[ [Support](https://discord.gg/3MRjT2x) \] \[ [Kod bota](https://github.com/CZUBIX/cenzura) \]", inline=False)
+        e.add_field(name="\u200b", value=f"\[ [Dodaj bota](https://discord.com/api/oauth2/authorize?client_id={self.bot.user.id}&permissions=305196118&scope=bot) \] \[ [Support](https://discord.gg/kJuGceekR5) \] \[ [Kod bota](https://github.com/CZUBIX/cenzura) \]", inline=False)
         
         await ctx.send(embed=e)
         
